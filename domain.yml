@@ -8,8 +8,28 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - migration
+
+entities:
+  - product
+
+slots:
+  product:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product
 
 responses:
+  utter_watson_migration:
+    - text: "You have been migrated from IBM Watson to Rasa Open Source."
+
+  utter_dialogflow_migration:
+    - text: "You have been migrated from Google Dialogflow to Rasa Open Source."
+
+  utter_ask_migration_product:
+    - text: "From which product do you want to migrate?"
+
   utter_greet:
     - text: "Hey! How are you?"
 

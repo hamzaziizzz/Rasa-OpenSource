@@ -27,3 +27,26 @@ stories:
       - action: utter_did_that_help
       - intent: deny
       - action: utter_goodbye
+
+  - story: migrate from IBM Watson
+    steps:
+      - intent: migration
+        entities:
+          - product: Watson
+      - slot_was_set:
+          - product: Watson
+      - action: utter_watson_migration
+
+  - story: migrate from Dialogflow
+    steps:
+      - intent: migration
+        entities:
+          - product: Dialogflow
+      - slot_was_set:
+          - product: Dialogflow
+      - action: utter_dialogflow_migration
+
+  - story: migrate from unspecified
+    steps:
+      - intent: migration
+      - action: utter_ask_migration_product

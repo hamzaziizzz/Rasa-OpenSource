@@ -83,6 +83,18 @@ nlu:
       - so saad
       - so sad
 
+  - intent: migration
+    examples: |
+      - I want to migrate
+      - I want to migrate to Rasa Open Source
+      - I want to migrate from [Watson](product)
+      - I want to migrate from [IBM Watson](product)
+      - I want to migrate from [Dialogflow](product)
+      - Migrate me from [Watson](product)
+      - Can you migrate from [Dialogflow](product)?
+      - Let's move from [IBM Watson](product)
+  
+
   - intent: bot_challenge
     examples: |
       - are you a bot?
